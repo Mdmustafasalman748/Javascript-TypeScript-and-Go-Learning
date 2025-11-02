@@ -34,7 +34,7 @@ async function withRetry(fn, retries = 3, delay = 500) {
     attempt = i;
     try {
       const result = await fn();
-      //number of retries used
+      //The number of retries used
       return { result, retriesUsed: i };
     } catch (err) {
       console.log(`Attempt ${i + 1} failed: ${err.message}`);
